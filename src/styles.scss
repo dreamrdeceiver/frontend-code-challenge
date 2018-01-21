@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import "node_modules/bootstrap/scss/bootstrap";
+
+$bg-calm: #5e35b1;
+
+.container-fluid {
+  width: 100%;
+  white-space: nowrap;
+  padding: 0px;
+}
+
+.bg-custom{
+  background: $bg-calm;
+}
