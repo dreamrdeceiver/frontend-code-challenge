@@ -1,0 +1,7 @@
+{
+  "/v1/advertisements": {
+    "target": "https://api.mcmakler.de",
+    "secure": true,
+    "changeOrigin": true
+  }
+}
