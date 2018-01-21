@@ -1,0 +1,61 @@
+<div class="container col-sm-12 col-md-12 col-lg-12 col-xl-12 p-3 bg-light">
+
+  <ng-progress [positionUsing]="'marginLeft'" [minimum]="0.50" [maximum]="1"
+                 [speed]="200" [showSpinner]="true" [direction]="'leftToRightIncreased'"
+                 [color]="'#ffffff'" [trickleSpeed]="250" [thick]="true" [ease]="'linear'"
+    ></ng-progress>
+
+  <div class="row py-4">
+    <div class="col-sm-12 col-md-4 col-lg-4 pb-5" *ngFor="let ad of ads">
+
+      <div class="card border border-light" style="width: 25rem; height: 26rem;">
+
+        <img class="card-img-top img-fluid" src="{{ad.url}}" alt="Card image cap">
+        <div class="card-img-overlay">
+          <div class="card-title">
+            <button *ngIf="ad.sellPrice else showMieten" type="button" class="btn btn-light font-weight-bold text-muted">Kaufen</button>
+            <ng-template #showMieten>
+              <button type="button" class="btn btn-light font-weight-bold text-muted">Mieten</button>
+            </ng-template>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <div class="row pb-3 px-2 justify-content-center">
+            <div class="col text-left">
+              <p class="card-title font-weight-bold px-2">{{ad.title}}</p>
+            </div>
+          </div>
+          <div class="row px-3 justify-content-center">
+            <div class="col text-left" *ngIf="ad.visibility else showBlank">
+              <p class="card-subtitle text-muted">{{ad.plz}} / {{ad.stadt}}</p>
+            </div>
+            <ng-template #showBlank>
+              <div class="col"> </div>
+            </ng-template>
+          </div>
+        </div>
+
+        <div class="card-footer pb-4">
+          <div class="row px-3">
+            <div class="col-sm-12 col-md-3" *ngIf="ad.sellPrice else showRent">
+              <p class="card-text font-weight-bold">{{ad.sellPrice}} €</p>
+            </div>
+            <ng-template #showRent>
+              <div class="col-sm-12 col-md-3">
+                <p class="card-text font-weight-bold">{{ad.baseRent}} €</p>
+              </div>
+            </ng-template>
+            <div class="col-sm-12 col-md-9 text-md-right">
+              <p class="card-text">
+                {{ad.zimmer}} Zimmer &nbsp;| ab {{ad.space | number : '1.0-0'}} m<sup>2</sup>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
