@@ -38,15 +38,15 @@
 
         <div class="card-footer pb-4">
           <div class="row px-3">
-            <div class="col-sm-12 col-md-3" *ngIf="ad.sellPrice else showRent">
+            <div class="col-md-3" *ngIf="ad.sellPrice else showRent">
               <p class="card-text font-weight-bold">{{ad.sellPrice | number : '1.0-0'}}€</p>
             </div>
             <ng-template #showRent>
-              <div class="col-sm-12 col-md-3">
+              <div class="col-md-3">
                 <p class="card-text font-weight-bold">{{ad.baseRent | number : '1.0-0'}}€</p>
               </div>
             </ng-template>
-            <div class="col-sm-12 col-md-5 border-right border-light text-md-right">
+            <div class=" col-md-5 border-right border-light text-md-right">
               <p class="card-text">
                 {{ad.zimmer}} Zimmer
               </p>
