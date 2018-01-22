@@ -7,7 +7,7 @@ import {NgProgress} from 'ngx-progressbar';
 @Component({
   selector: 'app-advertisements',
   templateUrl: './advertisements.component.html',
-  styleUrls: ['./advertisements.component.scss'],
+  styleUrls: ['./advertisements.component.scss']
 })
 
 export class AdvertisementsComponent implements OnInit {

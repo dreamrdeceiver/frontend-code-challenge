@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  public title: string;
   constructor(){
-    console.log('Helllo Root Component!');
+    this.title = 'McMakler Task Project';
   }
 }

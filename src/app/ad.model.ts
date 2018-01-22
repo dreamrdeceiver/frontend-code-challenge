@@ -7,7 +7,6 @@ export class AdModel {
     public zimmer: number,
     public space: number,
     public visibility: boolean,
-    public purpose: string,
     public sellPrice?: number,
     public baseRent?: number
     ){}

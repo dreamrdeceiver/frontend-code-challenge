@@ -18,7 +18,6 @@ export class AdvertisementsService {
     return this.http.get('/v1/advertisements')
       .map((response: any) => {
         const tenAds = response.data.splice(0, 10);
-        console.log(tenAds);
         for(const oneAd of tenAds)
         {
           this.advertisements.push(
@@ -30,7 +29,6 @@ export class AdvertisementsService {
               oneAd.realestateSummary.numberOfRooms,
               oneAd.realestateSummary.space,
               oneAd.userWishes.visibleAddress,
-              oneAd.purpose,
               oneAd.advertisementPrice.sellPrice,
               oneAd.advertisementPrice.baseRent
               )

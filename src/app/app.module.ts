@@ -10,6 +10,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import {AdvertisementsService} from './services/advertisements.service';
 import {HttpClientModule} from '@angular/common/http';
 import {NgProgressModule} from 'ngx-progressbar';
+import { AboutComponent } from './about/about.component';
 
 
 
@@ -17,7 +18,8 @@ import {NgProgressModule} from 'ngx-progressbar';
   declarations: [
     AppComponent,
     AdvertisementsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

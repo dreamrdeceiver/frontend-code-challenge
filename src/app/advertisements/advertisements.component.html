@@ -5,10 +5,10 @@
                  [color]="'#ffffff'" [trickleSpeed]="250" [thick]="true" [ease]="'linear'"
     ></ng-progress>
 
-  <div class="row py-4">
-    <div class="col-sm-12 col-md-4 col-lg-4 pb-5" *ngFor="let ad of ads">
 
-      <div class="card border border-light" style="width: 25rem; height: 26rem;">
+    <div class="card-columns">
+
+      <div class="card border border-light" *ngFor="let ad of ads">
 
         <img class="card-img-top img-fluid" src="{{ad.url}}" alt="Card image cap">
         <div class="card-img-overlay">
@@ -39,16 +39,21 @@
         <div class="card-footer pb-4">
           <div class="row px-3">
             <div class="col-sm-12 col-md-3" *ngIf="ad.sellPrice else showRent">
-              <p class="card-text font-weight-bold">{{ad.sellPrice}} €</p>
+              <p class="card-text font-weight-bold">{{ad.sellPrice | number : '1.0-0'}}€</p>
             </div>
             <ng-template #showRent>
               <div class="col-sm-12 col-md-3">
-                <p class="card-text font-weight-bold">{{ad.baseRent}} €</p>
+                <p class="card-text font-weight-bold">{{ad.baseRent | number : '1.0-0'}}€</p>
               </div>
             </ng-template>
-            <div class="col-sm-12 col-md-9 text-md-right">
+            <div class="col-sm-12 col-md-5 border-right border-light text-md-right">
               <p class="card-text">
-                {{ad.zimmer}} Zimmer &nbsp;| ab {{ad.space | number : '1.0-0'}} m<sup>2</sup>
+                {{ad.zimmer}} Zimmer
+              </p>
+            </div>
+            <div class="col-sm-12 col-md-4 text-md-left">
+              <p class="card-text">
+                ab {{ad.space | number : '1.0-0'}} m<sup>2</sup>
               </p>
             </div>
           </div>
@@ -57,5 +62,4 @@
       </div>
 
     </div>
-  </div>
 </div>
