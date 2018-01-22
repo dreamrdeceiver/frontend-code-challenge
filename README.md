@@ -11,13 +11,13 @@ This project was generated with Angular CLI version 1.6.5.
   * Reason: I prefer Angular because it is a very popular framework, large community for support and I am a very passionate Angular developer.
 
 3. External Dependencies
-  * ngx-progressbar - For showing a progress bar till the data loads - ngx-progressbar
+  * ngx-progressbar - For showing a progress bar till the data loads - [ngx-progressbar](https://www.npmjs.com/package/ngx-progressbar)
 
 ## Launching Project
 
->The task involved consuming public api "https://api.mcmakler.de/v1/advertisements". Angular in development environtment will throw a CROS error. To over come the issue a proxy file had to be attached and the traditional ng serve will not retrieve the data from api.
+>The task involved consuming public api "[https://api.mcmakler.de/v1/advertisements]". Angular in development environtment will throw a CROS error. To over come the issue a proxy file had to be attached and the traditional ng serve will not retrieve the data from api.
 
-Run npm install and then npm start to launch project and navigate to http://localhost:4200/
+<b>Run npm install</b> and then <b>npm start</b> to launch project and navigate to [http://localhost:4200/]
 
 ## Additional Info
 
