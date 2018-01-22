@@ -11,18 +11,19 @@ import {NgProgress} from 'ngx-progressbar';
 })
 
 export class AdvertisementsComponent implements OnInit {
-
+  //Component Variable Declaration
   public ads: AdModel[] = [];
 
+  //inject service and progress bar
   constructor(public adservice: AdvertisementsService, public progress: NgProgress) {  }
 
   ngOnInit() {
 
-    this.progress.start();
+    this.progress.start(); //start progress bar loading, call the service and subscribe
     this.adservice.getAdvertisements().subscribe(
       (ads: AdModel[]) =>{
-        this.ads = ads;
-        this.progress.done();
+        this.ads = ads; //assign ads to component variable
+        this.progress.done(); //stop progress bar loading
       });
   }
 

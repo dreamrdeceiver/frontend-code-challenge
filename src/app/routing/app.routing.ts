@@ -3,6 +3,7 @@ import {AdvertisementsComponent} from '../advertisements/advertisements.componen
 import {NotFoundComponent} from '../not-found/not-found.component';
 import {AboutComponent} from '../about/about.component';
 
+/*Route configuration for the app*/
 
 const APP_ROUTES: Routes = [
 
@@ -10,7 +11,8 @@ const APP_ROUTES: Routes = [
   { path: 'adverts', component: AdvertisementsComponent},
   { path: 'about', component: AboutComponent},
   { path: '404', component: NotFoundComponent},
-  { path: '**', redirectTo:'/404'}
-];
+  { path: '**', redirectTo: '/404'}
+
+  ];
 
 export const routing = RouterModule.forRoot(APP_ROUTES);

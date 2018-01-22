@@ -9,15 +9,14 @@ export class AdvertisementsService {
 
   public advertisements: AdModel[] = [];
 
-  constructor(private http: HttpClient) {
-    console.log('Hello AdService!');
-  }
+  constructor(private http: HttpClient) { }
 
+  /********Method to retrieve data from public api********/
   getAdvertisements()
   {
     return this.http.get('/v1/advertisements')
       .map((response: any) => {
-        const tenAds = response.data.splice(0, 10);
+        const tenAds = response.data.splice(0, 10); //splice content to retrieve only the first ten ads.
         for(const oneAd of tenAds)
         {
           this.advertisements.push(

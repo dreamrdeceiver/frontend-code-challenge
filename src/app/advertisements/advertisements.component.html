@@ -2,12 +2,11 @@
 
   <ng-progress [positionUsing]="'marginLeft'" [minimum]="0.50" [maximum]="1"
                  [speed]="200" [showSpinner]="true" [direction]="'leftToRightIncreased'"
-                 [color]="'#ffffff'" [trickleSpeed]="250" [thick]="true" [ease]="'linear'"
-    ></ng-progress>
+                 [color]="'#ffffff'" [trickleSpeed]="250" [thick]="true" [ease]="'linear'">
+  </ng-progress>
 
 
     <div class="card-columns">
-
       <div class="card border border-light" *ngFor="let ad of ads">
 
         <img class="card-img-top img-fluid" src="{{ad.url}}" alt="Card image cap">
@@ -18,7 +17,7 @@
               <button type="button" class="btn btn-light font-weight-bold text-muted">Mieten</button>
             </ng-template>
           </div>
-        </div>
+        </div> <!--end of card overlay for button-->
 
         <div class="card-body">
           <div class="row pb-3 px-2 justify-content-center">
@@ -34,7 +33,7 @@
               <div class="col"> </div>
             </ng-template>
           </div>
-        </div>
+        </div> <!--end of card body-->
 
         <div class="card-footer pb-4">
           <div class="row px-3">
@@ -57,9 +56,9 @@
               </p>
             </div>
           </div>
-        </div>
+        </div><!--end of footer-->
 
-      </div>
-
+      </div> <!--end of card -->
     </div>
+
 </div>

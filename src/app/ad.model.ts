@@ -1,3 +1,4 @@
+//Structure of data to be displayed
 export class AdModel {
   constructor(
     public url:string,
