@@ -17,7 +17,7 @@ This project was generated with Angular CLI version 1.6.5.
 
 >The task involved consuming public api "[https://api.mcmakler.de/v1/advertisements]". Angular in development environtment will throw a CROS error. To over come the issue a proxy file had to be attached and the traditional ng serve will not retrieve the data from api.
 
-<b>Run npm install</b> and then <b>npm start</b> to launch project and navigate to [http://localhost:4200/]
+Run <b>npm install</b> first and then <b>npm start</b> to launch project and navigate to [http://localhost:4200/]
 
 ## Additional Info
 
