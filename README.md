@@ -1,27 +1,23 @@
 # McmaklerTask
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+This project was generated with Angular CLI version 1.6.5.
 
-## Development server
+Frameworks Used
+Bootstrap 4 - CSS / SASS
+Reason: I prefer Bootstrap over material because it has better css classes and provides better customization and easier implementation. Angular Material is tedious (just my opinion!)
+Javascript Framework - Angular (Latest)
+Reason: I prefer Angular because it is a very popular framework, large community for support and I am a very passionate Angular developer.
+External Dependencies
+ngx-progressbar - For showing a progress bar till the data loads - ngx-progressbar
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Launching Project
 
-## Code scaffolding
+The task involved consuming public api "https://api.mcmakler.de/v1/advertisements". Angular in development environtment will throw a CROS error. To over come the issue a proxy file had to be attached and the traditional ng serve will not retrieve the data from api.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run npm install and then npm start to launch project and navigate to http://localhost:4200/
 
-## Build
+## Additional Info
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+;-[ running ng test for the api services shows error because of the usage of a third party module (ngx-progress) and I didn't want to waste time on figuring that out.
+In advertisements.component.spec.ts it can be seen that a test is written to test http get.
+Finally I thank McMakler for providing me this opportunity to prove my skills. Thank you for your consideration!
