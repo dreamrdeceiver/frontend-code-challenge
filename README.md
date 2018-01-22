@@ -2,7 +2,7 @@
 
 This project was generated with Angular CLI version 1.6.5.
 
-##Frameworks Used
+## Frameworks Used
 
 1.Bootstrap 4 - CSS / SASS
 ..*Reason: I prefer Bootstrap over material because it has better css classes and provides better customization and easier implementation. Angular Material is tedious (just my opinion!)
