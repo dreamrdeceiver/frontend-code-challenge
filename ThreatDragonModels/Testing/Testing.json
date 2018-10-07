@@ -1,0 +1,12 @@
+{
+  "summary": {
+    "title": "Testing",
+    "owner": "Abhijith",
+    "description": "This is a test threat model"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [],
+    "reviewer": "Abhy"
+  }
+}
